@@ -10,7 +10,7 @@
       affiliation: "情報科学類2年"
     ),
   ),
-  date: "2024 年 7 月 1 日",
+  date: "2024 年 7 月 2 日",
 )
 
 // 行列をいい感じにする
@@ -194,7 +194,7 @@ $
 
 #figure(
   image("fig/fig1.svg"),
-  caption: "課題 (4.2) のプログラムの出力結果"
+  caption: [課題 (4.2) のプログラムの出力結果]
 )
 
 === (4.3)
@@ -207,9 +207,26 @@ $
 
 #figure(
   image("fig/fig2.svg"),
-  caption: "課題 (4.3) のプログラムの出力結果"
+  caption: [課題 (4.3) のプログラムの出力結果]
 )
 
 == 課題5
+
+コードを以下に示す。
+
+#sourcefile(read("src/5.jl"), file:"src/5.jl")
+
 === (5.1)
+
+`findClosestIndex` が近似解に最も近い真の解のインデックスを返す関数である。
+
+`findClosestIndex(newtonMethod_p(2.0 + 2.0im), roots(Polynomial([-1, 0, 0, 1])))` を実行すると、出力として 3 が得られた。
+
 === (5.2)
+
+$m = 300$ でプロットした結果を以下に示す。
+
+#figure(
+  image("fig/fig3.png"),
+  caption: [$m = 300$ でプロットした結果]
+)

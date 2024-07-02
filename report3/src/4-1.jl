@@ -11,7 +11,8 @@ function newtonMethod_p(initial::ComplexF64)::ComplexF64
     while true
         z = z - (p(z) / p_derivative(z))
         if abs(p(z)) < 1e-5
-            return z
+            break
         end
     end
+    return z
 end

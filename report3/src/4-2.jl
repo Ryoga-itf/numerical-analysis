@@ -11,7 +11,6 @@ end
 
 function newtonMethod_p_withPlot(initial::ComplexF64)
     z = initial
-    count = 0
     re = [real(z)]
     im = [imag(z)]
     while true
@@ -29,7 +28,7 @@ function newtonMethod_p_withPlot(initial::ComplexF64)
         re,
         im,
         markershape=:x,
-        series_annotations = text.(0:length(re), :bottom, 6),
+        series_annotations = text.(0:length(re)-1, :bottom, 6),
         label = "z_k",
         xlabel = "Real",
         ylabel = "Imag"

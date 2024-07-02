@@ -13,7 +13,6 @@ function newtonMethod_p_withPlotAbs(initial::ComplexF64)
     z = initial
     diffs = [abs(p(initial))]
     while true
-        z_tmp = z
         z = z - (p(z) / p_derivative(z))
         current = abs(p(z))
         push!(diffs, current)
