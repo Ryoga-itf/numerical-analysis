@@ -6,7 +6,7 @@
 #let project(week: -1, authors: (), date: none, body) = {
   let title = "数値計算法 レポート課題" + str(week)
   set document(author: authors.map(a => a.name), title: title)
-  set page(numbering: "1", number-align: center)
+  set page(numbering: "1 / 1", number-align: center)
   set text(font: fontSerif, lang: "ja")
 
   show heading: set text(font: fontSan, weight: "medium", lang: "ja")
